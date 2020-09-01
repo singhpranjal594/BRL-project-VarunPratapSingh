@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- As a link -->
+  <form action="" method="POST">
+      {% csrf_token %}
+    <div>
+      <label for="name">name</label>
+      <input type="text" name="name">
+    </div>
+    <div>
+        <label for="password">
+            <label for="password">password</label>
+            <input type="password" name="password">
+        </label>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">rollno</label>
+      <input type="number" name="rollno" id="exampleInputPassword1">
+    </div>
+    <div class="form-group">
+        <label for="number">phonenumber</label>
+        <input type="tel"  name="phone"class="number">
+    </div>
+    <div class="form-group">
+        <label for="branch">branch</label>
+        <input type="text" name="branch">
+    </div>
+
+    <button type="submit" class="btn btn-primary">signup</button>
+  </form>
+</body>
+</html>

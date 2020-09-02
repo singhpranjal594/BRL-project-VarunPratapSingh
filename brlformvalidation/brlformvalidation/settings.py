@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'brlformvalidation.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'BRLform',
+        'NAME': 'form',
         'USER': 'postgres',
         'PASSWORD': '1234',
         'HOST': 'localhost',

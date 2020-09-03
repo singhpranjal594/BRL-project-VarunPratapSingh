@@ -11,18 +11,12 @@ def index(request):
         roll_no=request.POST['rollno']
         phone=request.POST['phone']
         branch=request.POST['branch']
-        rollnol=information.objects.all().values('roll_no')
-        a=False
-        for i in rollnol:
-            if i == roll_no:
-                a=True
-                break
-        if a:
-            return HttpResponse("eror rollno already exsists")
-        else:
-            info=information(name=name,password=password,roll_no=roll_no,phone=phone,branch=branch)
+        info=information(name=name,password=password,roll_no=roll_no,phone=phone,branch=branch)
+        try:
             info.save()
             return(render(request,'index.html'))
+        except:
+            return(render(request,'error.html'))
 
     else:
         return(render(request,'index.html'))

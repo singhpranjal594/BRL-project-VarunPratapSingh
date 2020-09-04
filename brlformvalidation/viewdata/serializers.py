@@ -1,0 +1,8 @@
+from rest_framework import serializers
+from signup.models import information
+
+class informationserializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = information
+        fields = '__all__'
+        

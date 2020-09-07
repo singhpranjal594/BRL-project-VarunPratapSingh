@@ -14,9 +14,9 @@ def index(request):
         info=information(name=name,password=password,roll_no=roll_no,phone=phone,branch=branch)
         try:
             info.save()
-            return(render(request,'index.html'))
+            return(render(request,'signup.html'))
         except:
             return(render(request,'error.html'))
 
     else:
-        return(render(request,'index.html'))
+        return(render(request,'signup.html'))

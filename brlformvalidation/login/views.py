@@ -15,4 +15,4 @@ def index(request):
         else:
             return(render(request,'error.html'))
     else:
-        return(render(request,'index.html'))
+        return(render(request,'login.html'))

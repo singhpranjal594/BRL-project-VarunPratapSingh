@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from signup.models import information
+from .models import information
 
 class informationserializer(serializers.HyperlinkedModelSerializer):
     class Meta:
